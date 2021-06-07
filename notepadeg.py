@@ -7,7 +7,7 @@ Created on Sun May 23 20:32:06 2021
 
 
 
-import platform
+#import platform
 #print(platform.python_version())
 
 #C:\path\to\python_64bit.exe -m pip install pywinauto

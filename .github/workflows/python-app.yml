@@ -35,4 +35,4 @@ jobs:
     - name: Test with pywinauto #pytest
       run: |
         #pytest
-        NotepadTestingdemo
+        NotepadTestingdemo.py

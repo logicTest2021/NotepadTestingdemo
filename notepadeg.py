@@ -29,7 +29,7 @@ from pywinauto import application
 
 #https://pywinauto.readthedocs.io/en/latest/HowTo.html#how-to-specify-a-usable-application-instance
 #app = Application(backend="uia").start('C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe', timeout=1)
-app = Application(backend="uia").start('Notepad.exe', timeout=1)
+app = Application(backend="uia").start('C:\\Windows\\system32\\Notepad.exe', timeout=1)
 if app.window(title = "Untitled — Notepad").exists():
     print('yes')
     

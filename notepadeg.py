@@ -30,7 +30,7 @@ print("opened notepad")
 
 app = Application(backend="uia").start('C:\\Windows\\system32\\Notepad.exe', timeout=1)    
 main_dlg = app.window(title='Untitled - Notepad')
-print("Opened a notepad")
+print("Opened a notepad aa")
 
 #main_dlg.print_control_identifiers()
 

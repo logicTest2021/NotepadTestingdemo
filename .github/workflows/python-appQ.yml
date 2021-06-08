@@ -25,8 +25,7 @@ jobs:
       with:
         python-version: 3.7.5 #3.9
     - name: Install dependencies
-      run: |
-        QGIS restore
+      run: |        
         python -m pip install --upgrade pip
         #pip install -U pywin32 
         pip install pywinauto

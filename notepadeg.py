@@ -32,7 +32,7 @@ app = Application(backend="uia").start('C:\\Windows\\system32\\Notepad.exe', tim
 main_dlg = app.window(title='Untitled - Notepad')
 print("Opened a notepad aa")
 
-#main_dlg.print_control_identifiers()
+main_dlg.print_control_identifiers()
 
 main_dlg.Edit.type_keys("Hello pywinauto!\n\t It’s a sample text^A",
                         with_spaces=True,

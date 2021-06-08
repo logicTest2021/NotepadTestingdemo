@@ -35,6 +35,7 @@ def WritelogToFile(logtext):
  
 #f = open("QGISLogFile.txt", "a",encoding='utf-8')
 OpenLogFile()
+WritelogToFile("--------Will Open QGIS app--------")
 app = Application(backend="uia").start('C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe', timeout=1)
 
 WritelogToFile("--------Begin New Log--------")
@@ -52,11 +53,12 @@ WritelogToFile("2. Got the main window dialog")
     
 time.sleep(3)
 #main_dlg.print_control_identifiers(filename='QGIS_controls.txt')
-#main_dlg.print_control_identifiers()
+main_dlg.print_control_identifiers()
+
 
 #dlgA = main_dlg.window(title="AequilibraE")
 #dlgA.Button1.click()
-
+'''
 time.sleep(1)
 
 #188,400 
@@ -106,7 +108,7 @@ WritelogToFile("8.Click on Close button of Error message window i.e Close the Er
 
 
 CloseLogFile()
-
+'''
 
 
 

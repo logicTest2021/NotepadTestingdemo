@@ -36,7 +36,7 @@ jobs:
     - name: Execute py script #Test with pywinauto #pytest
       run: |
         #pytest
-        python Testplugin.py
+        python Testplugin.py 
         #pip install pytest 
         #export PYTHONPATH = src 
         #pytest

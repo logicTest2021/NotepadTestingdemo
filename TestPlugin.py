@@ -22,10 +22,11 @@ from pywinauto import mouse
  
 def OpenLogFile():   
     #WritelogToFile("Starting to Log " )
+    print("Starting to log")
     
 def CloseLogFile():    
     #f.close()
-
+    print("End of log")
 def WritelogToFile(logtext):
     #f.write(str(logtext ))
     #f.write("\n")

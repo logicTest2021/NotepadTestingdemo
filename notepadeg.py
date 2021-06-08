@@ -1,5 +1,5 @@
 
-
+import platform
 import pywinauto, time 
 from  pywinauto.application import Application 
 

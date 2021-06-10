@@ -29,7 +29,8 @@ jobs:
         # QGIS restore
         
         sudo apt-get update
-        sudo apt-get install qgis python-matplotlib python-scipy
+        #sudo apt-get install qgis python-matplotlib python-scipy
+        sudo apt-get install qgis 
 
         python -m pip install --upgrade pip
         #pip install -U pywin32 

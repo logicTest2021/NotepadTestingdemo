@@ -12,8 +12,8 @@ on:
 jobs:
   build:
 
-    #runs-on: windows-latest #ubuntu-latest
-    runs-on: ubuntu-latest
+    runs-on: windows-latest #ubuntu-latest
+    #runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     #- name: Set up QGIS 3.16.6
@@ -27,10 +27,10 @@ jobs:
     - name: Install dependencies
       run: |
         # QGIS restore
-        
-        sudo apt-get update
+        choco install qgis
+        #sudo apt-get update
         #sudo apt-get install qgis python-matplotlib python-scipy
-        sudo apt-get install qgis 
+        #sudo apt-get install qgis 
 
         python -m pip install --upgrade pip
         #pip install -U pywin32 

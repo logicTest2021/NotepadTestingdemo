@@ -7,9 +7,9 @@ Created on Sat May 22 20:21:48 2021
 
 import platform
 import os
-print('files in direcotry are -')
-arr = os.listdir('C:\\Program Files\\QGIS 3.16\\bin\\')
-print(arr)
+#print('files in direcotry are -')
+#arr = os.listdir('C:\\Program Files\\QGIS 3.16\\bin\\')
+#print(arr)
 
 #print(platform.python_version())
 
@@ -60,7 +60,7 @@ WritelogToFile("2. Got the main window dialog")
     
 time.sleep(3)
 #main_dlg.print_control_identifiers(filename='QGIS_controls.txt')
-main_dlg.print_control_identifiers()
+print(main_dlg.print_control_identifiers())
 
 
 #dlgA = main_dlg.window(title="AequilibraE")

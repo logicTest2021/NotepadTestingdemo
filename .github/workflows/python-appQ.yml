@@ -12,21 +12,25 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest #ubuntu-latest
-
+    #runs-on: windows-latest #ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up QGIS 3.16.6
-      uses: actions/setup-qgis-ltr-bin@v1
-      with:
-        qgis-ltr-bin-version: 3.16.6 #3.9
+    #- name: Set up QGIS 3.16.6
+    #  uses: actions/setup-qgis-ltr-bin@v1
+    #  with:
+    #    qgis-ltr-bin-version: 3.16.6 #3.9
     - name: Set up Python 3.7.5 #Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.7.5 #3.9
     - name: Install dependencies
       run: |
-        QGIS restore
+        # QGIS restore
+        
+        sudo apt-get update
+        sudo apt-get install qgis python-matplotlib python-scipy
+
         python -m pip install --upgrade pip
         #pip install -U pywin32 
         pip install pywinauto

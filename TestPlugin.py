@@ -42,7 +42,7 @@ def WritelogToFile(logtext):
 #f = open("QGISLogFile.txt", "a",encoding='utf-8')
 OpenLogFile()
 WritelogToFile("--------Will Open QGIS app--------")
-app = Application(backend="uia").start("C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe", timeout=1)
+app = Application(backend="uia").start("C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe", timeout=5)
 #app = Application(backend="uia").start("qgis", timeout=1)
 
 WritelogToFile("--------Begin New Log--------")
@@ -58,14 +58,14 @@ if app.window(title = "Untitled Project — QGIS").exists():
 main_dlg = app.window(title='Untitled Project — QGIS')
 WritelogToFile("2. Got the main window dialog")
     
-time.sleep(3)
+#time.sleep(3)
 #main_dlg.print_control_identifiers(filename='QGIS_controls.txt')
 print(main_dlg.print_control_identifiers())
 
 
-#dlgA = main_dlg.window(title="AequilibraE")
-#dlgA.Button1.click()
-
+dlgA = main_dlg.window(title="AequilibraE")
+dlgA.Button1.click()
+print("AequilibraE clicked")
 
 '''
 time.sleep(1)

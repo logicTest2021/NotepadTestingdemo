@@ -42,8 +42,9 @@ def WritelogToFile(logtext):
 #f = open("QGISLogFile.txt", "a",encoding='utf-8')
 OpenLogFile()
 WritelogToFile("--------Will Open QGIS app--------")
-app = Application(backend="uia").start("C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe", timeout=5)
-#app = Application(backend="uia").start("qgis", timeout=1)
+app = Application(backend="uia").start("C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe", timeout=30)
+print(app.windows())
+#app = Application(backend="uia").start("qgis", timeout=30)
 
 WritelogToFile("--------Begin New Log--------")
 WritelogToFile("1. Opened QGIS application")

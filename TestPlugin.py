@@ -6,6 +6,11 @@ Created on Sat May 22 20:21:48 2021
 """ 
 
 import platform
+import os
+print('files in direcotry are -')
+arr = os.listdir('C:\\Program Files\\QGIS 3.16\\bin\\')
+print(arr)
+
 #print(platform.python_version())
 
 #C:\path\to\python_64bit.exe -m pip install pywinauto

@@ -26,8 +26,10 @@ jobs:
         python-version: 3.7.5 #3.9
     - name: Install dependencies
       run: |
-        # QGIS restore
-        choco install qgis
+       
+        #choco install qgis
+        choco install qgis --version=3.16.6
+        
         #sudo apt-get update
         #sudo apt-get install qgis python-matplotlib python-scipy
         #sudo apt-get install qgis 

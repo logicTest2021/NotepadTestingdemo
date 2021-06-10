@@ -28,7 +28,7 @@ jobs:
       run: |
        
         #choco install qgis
-        choco install qgis --version=3.16.6
+        choco install qgis-ltr --version=3.16.6
         
         #sudo apt-get update
         #sudo apt-get install qgis python-matplotlib python-scipy

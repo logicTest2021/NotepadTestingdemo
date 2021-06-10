@@ -48,7 +48,7 @@ print(app.windows())
 
 WritelogToFile("--------Begin New Log--------")
 WritelogToFile("1. Opened QGIS application")
-'''
+
 app.set_focus
   
 
@@ -57,8 +57,11 @@ if app.window(title = "Untitled Project — QGIS").exists():
 
 
 
-main_dlg = app.window(title='Untitled Project — QGIS')
+#main_dlg = app.window(title='Untitled Project — QGIS')
+main_dlg = app.window(title='Welcome to QGIS')
 WritelogToFile("2. Got the main window dialog")
+print(main_dlg.print_control_identifiers())
+'''
 '''    
 #time.sleep(3)
 #main_dlg.print_control_identifiers(filename='QGIS_controls.txt')

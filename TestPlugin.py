@@ -130,11 +130,11 @@ CloseLogFile()
 '''
 
 
-'''
+
 
 MouseclicksonMenus(57,393)
 MouseclicksonMenus(300,438)
-
+WritelogToFile("Mouse clickd on Aequilibrae->Project->Open OSM")
 
 
 time.sleep(4)
@@ -166,7 +166,7 @@ proj_dlgclose.Button1.click()
 
 WritelogToFile("--- CREATED PROJECT FROM OSM ---")
 
-'''
+
 WritelogToFile("--- END **************")
 
 

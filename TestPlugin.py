@@ -63,6 +63,9 @@ if app.window(title = "Untitled Project — QGIS").exists():
 main_dlg = app.window(title='Welcome to QGIS')
 WritelogToFile("2. Got the main window dialog")
 print(main_dlg.print_control_identifiers())
+
+proj_dlg = main_dlg.window(title='AequilibraE Project')
+WritelogToFile("2. Got the mAequilibraE Project window")
 '''
 '''    
 #time.sleep(3)
@@ -127,7 +130,7 @@ CloseLogFile()
 '''
 
 
-
+'''
 
 MouseclicksonMenus(57,393)
 MouseclicksonMenus(300,438)
@@ -163,6 +166,8 @@ proj_dlgclose.Button1.click()
 
 WritelogToFile("--- CREATED PROJECT FROM OSM ---")
 
+'''
+WritelogToFile("--- END **************")
 
 
 

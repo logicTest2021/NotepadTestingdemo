@@ -37,7 +37,9 @@ def WritelogToFile(logtext):
     #f.write("\n")
     print(logtext)
     print("\n")
-    
+
+def MouseclicksonMenus(arg1, arg2):
+    pywinauto.mouse.click(button="left", coords=(arg1,arg2 ))
  
 #f = open("QGISLogFile.txt", "a",encoding='utf-8')
 OpenLogFile()
@@ -127,7 +129,39 @@ CloseLogFile()
 
 
 
+MouseclicksonMenus(57,393)
+MouseclicksonMenus(300,438)
 
+
+
+time.sleep(4)
+proj_dlg1 = app.window(title='AequilibraE')
+WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")
+#proj_dlg1.print_control_identifiers()
+
+proj_dlg1.placename.click()
+proj_dlg1.print_control_identifiers()
+proj_dlg1.Edit1.type_keys("BLUE RIDGE, GA")
+
+WritelogToFile("--- ENTERED PLACE NAME ---")
+proj_dlg1.Button2.click()
+WritelogToFile("--- CLICK ON CHOOSE FILE OUTPUT ---")
+
+proj_dlg1.ComboBox1.Edit5.type_keys("BlueRidge")
+WritelogToFile("--- ENTERED FILE NAME ---")
+
+#proj_dlg1.window("Open").print_control_identifiers()
+proj_dlg1.Open4.click()
+proj_dlg1.Button3.click()
+time.sleep(30)
+WritelogToFile("--------30 sec over----------")
+#proj_dlg1.print_control_identifiers()
+#proj_dlgclose = app.window(title='AequilibraE — Procedure report')
+proj_dlgclose = app.window(title_re=".*Procedure*")
+proj_dlgclose.print_control_identifiers()
+proj_dlgclose.Button1.click()
+
+WritelogToFile("--- CREATED PROJECT FROM OSM ---")
 
 
 

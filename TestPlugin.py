@@ -45,7 +45,7 @@ def MouseclicksonMenus(arg1, arg2):
 OpenLogFile()
 WritelogToFile("--------Will Open QGIS app--------")
 app = Application(backend="uia").start("C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe", timeout=30)
-print(app.windows())
+WritelogToFile(app.windows())
 #app = Application(backend="uia").start("qgis", timeout=30)
 
 WritelogToFile("--------Begin New Log--------")
@@ -61,11 +61,12 @@ if app.window(title = "Untitled Project — QGIS").exists():
 
 #main_dlg = app.window(title='Untitled Project — QGIS')
 main_dlg = app.window(title='Welcome to QGIS')
+WritelogToFile(main_dlg.windows())
 WritelogToFile("2. Got the main window dialog")
-print(main_dlg.print_control_identifiers())
 
-proj_dlg = main_dlg.window(title='AequilibraE Project')
-WritelogToFile("2. Got the mAequilibraE Project window")
+#proj_dlg = main_dlg.window(title='AequilibraE Project')
+#WritelogToFile("2. Got the mAequilibraE Project window")
+
 '''
 '''    
 #time.sleep(3)
@@ -137,11 +138,12 @@ MouseclicksonMenus(300,438)
 WritelogToFile("Mouse clickd on Aequilibrae->Project->Open OSM")
 
 
-time.sleep(4)
+#time.sleep(4)
 proj_dlg1 = app.window(title='AequilibraE')
+WritelogToFile( proj_dlg1.print_control_identifiers())
+
 WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")
 #proj_dlg1.print_control_identifiers()
-WritelogToFile( proj_dlg1.print_control_identifiers())
 '''
 proj_dlg1.placename.click()
 proj_dlg1.Edit1.type_keys("BLUE RIDGE, GA")

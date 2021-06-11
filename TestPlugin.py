@@ -141,9 +141,9 @@ time.sleep(4)
 proj_dlg1 = app.window(title='AequilibraE')
 WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")
 #proj_dlg1.print_control_identifiers()
-
+WritelogToFile( proj_dlg1.print_control_identifiers())
+'''
 proj_dlg1.placename.click()
-proj_dlg1.print_control_identifiers()
 proj_dlg1.Edit1.type_keys("BLUE RIDGE, GA")
 
 WritelogToFile("--- ENTERED PLACE NAME ---")
@@ -169,7 +169,7 @@ WritelogToFile("--- CREATED PROJECT FROM OSM ---")
 
 WritelogToFile("--- END **************")
 
-
+'''
 
 
 

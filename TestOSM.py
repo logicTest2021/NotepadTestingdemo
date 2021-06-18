@@ -142,9 +142,10 @@ main_dlg = app.top_window()
 
 #OpenProject(main_dlg)
 #DisplayAequilibraEPanel(main_dlg,app)
-#OpenProjectOSM(app)
+#
 DisplayAequilibraEPanel(main_dlg, app)
-
+time.sleep(3)
+OpenProjectOSM(app)
 
 
 

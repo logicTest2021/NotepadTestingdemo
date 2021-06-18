@@ -25,6 +25,9 @@ def OpenQGISApp():
     WritelogToFile("1. Opened QGIS application")
     WritelogToFile(app.top_window().print_control_identifiers())
     app.set_focus
+    app.top_window().Button2.click()
+    WritelogToFile('Button2 clicked')
+    
     return app
 
 def MouseclicksonMenus(arg1, arg2):

@@ -21,7 +21,7 @@ def WritelogToFile(logtext):
     
 def OpenQGISApp():
     WritelogToFile("----------------Starting to Log----------------------------") 
-    app = Application(backend="uia").start('C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe', timeout=1)
+    app = Application(backend="uia").start('C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe', timeout=10)
     WritelogToFile("1. Opened QGIS application")
     return app
 
@@ -80,9 +80,10 @@ def OpenProjectOSM(app):
     MouseclicksonMenus(300,438)
     WritelogToFile("Clicked on Project->OSM menus") 
     
-    proj_dlg1 = app.window(title='AequilibraE')
+    #proj_dlg1 = app.window(title='AequilibraE')
+    proj_dlg1 = app.window(title='AequilibraE').wait('ready',timeout=5)
     WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")
-    #proj_dlg1.print_control_identifiers()
+    WritelogToFile(proj_dlg1.print_control_identifiers())
     time.sleep(4)
    
     

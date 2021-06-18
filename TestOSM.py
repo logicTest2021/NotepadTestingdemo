@@ -83,23 +83,27 @@ def OpenProjectOSM(app):
     proj_dlg1 = app.window(title='AequilibraE')
     WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")
     #proj_dlg1.print_control_identifiers()
+    time.sleep(4)
    
     
     proj_dlg1.placename.click()    
     WritelogToFile("Clicked on Placename") 
-    
+    time.sleep(2)
     #proj_dlg1.print_control_identifiers()    
     proj_dlg1.Edit1.type_keys("BLUE RIDGE, GA") 
     WritelogToFile("Entered BlueRidge as placename") 
+    time.sleep(2)
     
     proj_dlg1.Button2.click()    
     WritelogToFile("Clicked on Choose File Output Button") 
+    time.sleep(2)
     
     proj_dlg1.ComboBox1.Edit5.type_keys("BlueRidge")
     WritelogToFile("Entered File Name with sqlite extension") 
-    
+    time.sleep(2)
     #proj_dlg1.window("Open").print_control_identifiers()
     proj_dlg1.Open4.click()
+    time.sleep(1)
     proj_dlg1.Button3.click()    
     
     time.sleep(30)

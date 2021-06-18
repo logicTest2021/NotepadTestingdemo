@@ -80,8 +80,8 @@ def OpenProjectOSM(app):
     MouseclicksonMenus(300,438)
     WritelogToFile("Clicked on Project->OSM menus") 
     
-    #proj_dlg1 = app.window(title='AequilibraE')
-    proj_dlg1 = app.window(title='AequilibraE').wait('ready',timeout=5)
+    proj_dlg1 = app.window(title='AequilibraE')
+    #proj_dlg1 = app.window(title='AequilibraE').wait('ready',timeout=5)
     WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")
     WritelogToFile(proj_dlg1.print_control_identifiers())
     time.sleep(4)

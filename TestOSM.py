@@ -2,7 +2,7 @@
 """
 Created on Tue Jun 15 22:19:08 2021
 
-@author: sachi
+@author:  
 """
  
 import pywinauto,time
@@ -24,6 +24,7 @@ def OpenQGISApp():
     app = Application(backend="uia").start('C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe', timeout=10)
     WritelogToFile("1. Opened QGIS application")
     WritelogToFile(app.top_window().print_control_identifiers())
+    app.set_focus
     return app
 
 def MouseclicksonMenus(arg1, arg2):

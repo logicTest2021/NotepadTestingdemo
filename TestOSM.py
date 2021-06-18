@@ -23,6 +23,7 @@ def OpenQGISApp():
     WritelogToFile("----------------Starting to Log----------------------------") 
     app = Application(backend="uia").start('C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe', timeout=10)
     WritelogToFile("1. Opened QGIS application")
+    WritelogToFile(app.top_window().print_control_identifiers())
     return app
 
 def MouseclicksonMenus(arg1, arg2):

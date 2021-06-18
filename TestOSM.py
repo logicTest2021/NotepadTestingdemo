@@ -57,20 +57,24 @@ def OpenProject(main_dlg):
     WritelogToFile("")
     main_dlg.window(title_re ='.*error has.*', found_index =0).Button1.click()
         
-def DisplayAequilibraEPanel(main_dlg,app):    
+def DisplayAequilibraEPanel(main_dlg,app):  
     MouseclicksonMenus(214,76)
+    WritelogToFile('Clicked on View')
     time.sleep(3)
     pywinauto.mouse.scroll(coords=(614, 1552))
     time.sleep(2)    
     pywinauto.mouse.move(coords=(624, 1554))
-   
+    WritelogToFile('Moved to Panels')
     #MouseclicksonMenus(614,552)
-    time.sleep(3)
+    time.sleep(2)
     pywinauto.mouse.scroll(coords=(1248, 1313))
     pywinauto.mouse.move(coords=(1258, 1319))
+    MouseclicksonMenus(1258,1319)
+    WritelogToFile('Clicked on AequilibraE')
     #MouseclicksonMenus(1258,1319)
     #MouseclicksonMenus(1248,1313) #Menuitem AEquilibraE
-    time.sleep(4)    
+    time.sleep(2)    
+     
    
  
 def OpenProjectOSM(app):    
@@ -138,8 +142,8 @@ main_dlg = app.top_window()
 
 #OpenProject(main_dlg)
 #DisplayAequilibraEPanel(main_dlg,app)
-OpenProjectOSM(app)
-
+#OpenProjectOSM(app)
+DisplayAequilibraEPanel(main_dlg, app)
 
 
 

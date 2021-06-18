@@ -78,17 +78,26 @@ def OpenProjectOSM(app):
     
     MouseclicksonMenus(57,393)
     MouseclicksonMenus(300,438)
-     
+    WritelogToFile("Clicked on Project->OSM menus") 
+    
     proj_dlg1 = app.window(title='AequilibraE')
     WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")
     #proj_dlg1.print_control_identifiers()
    
     
     proj_dlg1.placename.click()    
+    WritelogToFile("Clicked on Placename") 
+    
     #proj_dlg1.print_control_identifiers()    
-    proj_dlg1.Edit1.type_keys("BLUE RIDGE, GA")    
+    proj_dlg1.Edit1.type_keys("BLUE RIDGE, GA") 
+    WritelogToFile("Entered BlueRidge as placename") 
+    
     proj_dlg1.Button2.click()    
-    proj_dlg1.ComboBox1.Edit5.type_keys("BlueRidge")    
+    WritelogToFile("Clicked on Choose File Output Button") 
+    
+    proj_dlg1.ComboBox1.Edit5.type_keys("BlueRidge")
+    WritelogToFile("Entered File Name with sqlite extension") 
+    
     #proj_dlg1.window("Open").print_control_identifiers()
     proj_dlg1.Open4.click()
     proj_dlg1.Button3.click()    
@@ -97,6 +106,8 @@ def OpenProjectOSM(app):
     
     WritelogToFile("------------30 sec over--------------")
     proj_dlgclose = app.window(title_re=".*Procedure*")
+    WritelogToFile("The procedure window is displayed") 
+    
     #proj_dlgclose.print_control_identifiers()
     WritelogToFile()(proj_dlgclose.Edit0.window_text())
     proj_dlgclose.Button1.click()

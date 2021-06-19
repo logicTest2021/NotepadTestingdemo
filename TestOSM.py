@@ -23,7 +23,7 @@ def OpenQGISApp():
     WritelogToFile("----------------Starting to Log----------------------------") 
     app = Application(backend="uia").start('C:\\Program Files\\QGIS 3.16\\bin\\qgis-ltr-bin.exe', timeout=10)
     WritelogToFile("1. Opened QGIS application")
-    WritelogToFile(app.top_window().print_control_identifiers())
+    #WritelogToFile(app.top_window().print_control_identifiers())
     app.set_focus
     app.top_window().Button2.click()
     WritelogToFile('Button2 clicked')
@@ -82,14 +82,20 @@ def DisplayAequilibraEPanel(main_dlg,app):
      
    
  
-def OpenProjectOSM(app):    
+def OpenProjectOSM(main_dlg,app):    
+   
+    DisplayAequilibraEPanel(main_dlg,app)
+   
     WritelogToFile("-------Testing of Project->Open Project From OSM")
-    
     MouseclicksonMenus(57,393)
     MouseclicksonMenus(300,438)
     WritelogToFile("Clicked on Project->OSM menus") 
-    app.top_window().print_control_identifiers()
+    #app.top_window().print_control_identifiers()
     
+    proj_dlg_main = main_dlg.window(title='AequilibraE')
+    WritelogToFile(proj_dlg_main.dump_tree())
+    
+    WritelogToFile("Start with app-aequi") 
     proj_dlg1 = app.window(title='AequilibraE')
     WritelogToFile(proj_dlg1.dump_tree())
     '''
@@ -151,9 +157,9 @@ main_dlg = app.top_window()
 #OpenProject(main_dlg)
 #DisplayAequilibraEPanel(main_dlg,app)
 #
-DisplayAequilibraEPanel(main_dlg, app)
-time.sleep(3)
-OpenProjectOSM(app)
+#DisplayAequilibraEPanel(main_dlg, app)
+#time.sleep(3)
+OpenProjectOSM(main_dlg,app)
 
 
 

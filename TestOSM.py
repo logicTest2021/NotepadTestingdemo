@@ -85,16 +85,18 @@ def DisplayAequilibraEPanel(main_dlg,app):
 def OpenProjectOSM(main_dlg,app):    
    
     DisplayAequilibraEPanel(main_dlg,app)
-   
+    time.sleep(3) 
+    
     WritelogToFile("-------Testing of Project->Open Project From OSM")
     MouseclicksonMenus(57,393)
     MouseclicksonMenus(300,438)
+    time.sleep(2) 
     WritelogToFile("Clicked on Project->OSM menus") 
     #app.top_window().print_control_identifiers()
     
     proj_dlg_main = main_dlg.window(title='AequilibraE')
     WritelogToFile(proj_dlg_main.dump_tree())
-    
+    time.sleep(20) 
     WritelogToFile("Start with app-aequi") 
     proj_dlg1 = app.window(title='AequilibraE')
     WritelogToFile(proj_dlg1.dump_tree())

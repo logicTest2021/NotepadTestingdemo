@@ -94,12 +94,13 @@ def OpenProjectOSM(main_dlg,app):
     WritelogToFile("Clicked on Project->OSM menus") 
     #app.top_window().print_control_identifiers()
     
-    proj_dlg_main = main_dlg.window(title='AequilibraE')
-    WritelogToFile(proj_dlg_main.dump_tree())
-    time.sleep(20) 
-    WritelogToFile("Start with app-aequi") 
+    #proj_dlg_main = main_dlg.window(title='AequilibraE')
+    #WritelogToFile(proj_dlg_main.dump_tree())
+     
+    #WritelogToFile("Start with app-aequi") 
     proj_dlg1 = app.window(title='AequilibraE')
     WritelogToFile(proj_dlg1.dump_tree())
+    time.sleep(20)
     '''
     #proj_dlg1 = app.window(title='AequilibraE').wait('ready',timeout=5)
     WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")

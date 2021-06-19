@@ -91,6 +91,8 @@ def OpenProjectOSM(app):
     app.top_window().print_control_identifiers()
     
     proj_dlg1 = app.window(title='AequilibraE')
+    WritelogToFile(proj_dlg1.dump_tree())
+    '''
     #proj_dlg1 = app.window(title='AequilibraE').wait('ready',timeout=5)
     WritelogToFile("3. Got the Aequilibrae->Project->Project-Create Project From OSM")
     WritelogToFile(proj_dlg1.print_control_identifiers())

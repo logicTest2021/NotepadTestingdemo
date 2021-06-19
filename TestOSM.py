@@ -96,9 +96,11 @@ def OpenProjectOSM(main_dlg,app):
     
     #proj_dlg_main = main_dlg.window(title='AequilibraE')
     #WritelogToFile(proj_dlg_main.dump_tree())
-     
+    time.sleep(5) 
     #WritelogToFile("Start with app-aequi") 
     proj_dlg1 = app.window(title='AequilibraE')
+    proj_dlg1.wait('ready', timeout=20)  
+
     WritelogToFile(proj_dlg1.dump_tree())
     time.sleep(20)
     '''

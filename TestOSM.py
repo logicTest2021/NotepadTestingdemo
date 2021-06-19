@@ -129,7 +129,7 @@ def OpenProjectOSM(app):
     WritelogToFile()(proj_dlgclose.Edit0.window_text())
     proj_dlgclose.Button1.click()
     
-    
+    '''
     
     
     

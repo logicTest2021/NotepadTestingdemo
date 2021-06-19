@@ -25,6 +25,7 @@ def OpenQGISApp():
     WritelogToFile("1. Opened QGIS application")
     #WritelogToFile(app.top_window().print_control_identifiers())
     app.set_focus
+    
     app.top_window().Button2.click()
     WritelogToFile('Button2 clicked')
     
@@ -99,8 +100,7 @@ def OpenProjectOSM(main_dlg,app):
     time.sleep(5) 
     #WritelogToFile("Start with app-aequi") 
     proj_dlg1 = app.window(title='AequilibraE')
-    proj_dlg1.wait('ready', timeout=20)  
-
+    proj_dlg1.Wait('ready')
     WritelogToFile(proj_dlg1.dump_tree())
     time.sleep(20)
     '''
